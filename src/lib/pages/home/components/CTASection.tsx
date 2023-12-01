@@ -1,11 +1,11 @@
-import { Button } from '@/lib/components/ui/button';
+import { Button, Flex, Grid } from '@radix-ui/themes';
 
-const repoName = 'sozonome/vite-react-tailwind-starter';
+const repoName = 'sozonome/vite-react-radix-starter';
 
 const CTASection = () => {
   return (
-    <div className="grid justify-items-center gap-2.5">
-      <div className="flex items-center gap-2">
+    <Grid justify="center" gap="2">
+      <Flex gap="2">
         <a
           href={`https://vercel.com/import/git?s=https://github.com/${repoName}`}
           className="flex items-center"
@@ -31,13 +31,10 @@ const CTASection = () => {
             alt="Netlify deploy button"
           />
         </a>
-      </div>
+      </Flex>
 
-      <div className="flex items-center gap-2">
-        <Button
-          asChild
-          className="bg-gradient-to-br from-gray-100 to-green-200 font-semibold text-green-700 hover:from-gray-200 hover:to-green-200 hover:text-green-800"
-        >
+      <Flex gap="4" justify="center" align="center">
+        <Button asChild color="orange">
           <a
             href={`https://github.com/${repoName}/generate`}
             target="_blank"
@@ -46,7 +43,7 @@ const CTASection = () => {
             Use This Template
           </a>
         </Button>
-        <Button asChild variant="link">
+        <Button asChild variant="ghost">
           <a
             className=" p-2 rounded-3xl text-xs font-semibold"
             href={`https://github.com/${repoName}`}
@@ -56,8 +53,8 @@ const CTASection = () => {
             Repository
           </a>
         </Button>
-      </div>
-    </div>
+      </Flex>
+    </Grid>
   );
 };
 
